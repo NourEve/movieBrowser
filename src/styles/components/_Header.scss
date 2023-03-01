@@ -1,0 +1,9 @@
+.header {
+      &__title {
+            color: white;
+
+            &--color {
+                  @include gradientText;
+            }
+      }
+}

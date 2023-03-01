@@ -1,0 +1,32 @@
+//Fonts
+
+//Variables
+$grayIcons : #DADADA;
+$grayText : #BCBCBC;
+
+//Mixins
+@mixin gradient () {
+      background: linear-gradient(244.07deg, #FF8F71 47.24%, #EF2D1A 120.34%);
+}
+
+@mixin gradientText() {
+      background: linear-gradient(244.07deg, #FF8F71 47.24%, #EF2D1A 120.34%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+@mixin blur () {
+      backdrop-filter: blur(2.405px);
+}
+
+//Reset
+* {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      background-color: #000000;
+}
+
+li {
+      list-style-type: none;
+}
