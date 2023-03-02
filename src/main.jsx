@@ -5,6 +5,7 @@ import "./styles/index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SearchPage from "./SearchPage";
 import ProfilePage from "./ProfilePage";
+import ChildrenGenre from "./components/ChildrenGenre";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,12 @@ const router = createBrowserRouter([
   {
     path: "search",
     element: <SearchPage />,
+    children: [
+      {
+        path: "genre/:genreId",
+        element: <ChildrenGenre />,
+      },
+    ],
   },
   {
     path: "profile",

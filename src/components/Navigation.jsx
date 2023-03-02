@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <div>
+    <nav>
       <NavLink to={"/"}>
         <IconHome width="50px" height="50px" onClick={() => alert("pink")} />
       </NavLink>
@@ -16,7 +16,7 @@ const Navigation = () => {
       <NavLink to={"/profile"}>
         <IconProfile width="50px" height="50px" />
       </NavLink>
-    </div>
+    </nav>
   );
 };
 

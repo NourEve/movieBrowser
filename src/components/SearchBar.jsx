@@ -1,7 +1,11 @@
 import React from "react";
 
 const SearchBar = () => {
-  return <div></div>;
+  return (
+    <div>
+      <p>SearchBar</p>
+    </div>
+  );
 };
 
 export default SearchBar;
