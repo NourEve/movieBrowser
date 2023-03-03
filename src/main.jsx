@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SearchPage from "./SearchPage";
 import ProfilePage from "./ProfilePage";
 import ChildrenGenre from "./components/ChildrenGenre";
+import ShowFilm from "./components/ShowFilm";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "profile",
     element: <ProfilePage />,
+  },
+  {
+    path: "movie/:movieId",
+    element: <ShowFilm />,
   },
 ]);
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const ChildrenGenre = () => {
   const { genreId } = useParams();
@@ -14,16 +15,20 @@ const ChildrenGenre = () => {
     }).then((res) => setFilterGenre(res.data.results));
   }, [genreId]);
 
+  console.log(filterGenre);
+
   return (
     <div>
       {filterGenre.map((movie, index) => (
-        <div key={index}>
-          <img
-            src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
-            alt={"Poster of" + movie.original_title}
-          />
-          <h3>{movie.original_title}</h3>
-        </div>
+        <Link key={index} to={`/movie/${movie.id}`}>
+          <div>
+            <img
+              src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
+              alt={"Poster of" + movie.original_title}
+            />
+            <h3>{movie.original_title}</h3>
+          </div>
+        </Link>
       ))}
     </div>
   );
