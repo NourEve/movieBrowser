@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Spotlight = () => {
   const [movieRecommendation, setMovieRecommendation] = useState([]);
@@ -28,12 +29,14 @@ const Spotlight = () => {
 
   return (
     <div className="spotlight">
-      <h2>Movie Spotlight</h2>
-      <h3>{movieOne.original_title}</h3>
-      <img
-        src={"https://image.tmdb.org/t/p/w500" + movieOne.backdrop_path}
-        alt={"Poster of" + movieOne.original_title}
-      />
+      <Link to={`/movie/${movieOne.id}`}>
+        <h2>Movie Spotlight</h2>
+        <h3>{movieOne.original_title}</h3>
+        <img
+          src={"https://image.tmdb.org/t/p/w500" + movieOne.backdrop_path}
+          alt={"Poster of" + movieOne.original_title}
+        />
+      </Link>
     </div>
   );
 };

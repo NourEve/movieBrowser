@@ -4,32 +4,41 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Collections from "./Collections";
 import Recommanded from "./Recommanded";
+import PlayerTrailer from "./PlayerTrailer";
 
 const ShowFilm = () => {
   const { movieId } = useParams();
   const [movieOne, setMovieOne] = useState([]);
   const [genreOne, setGenreOne] = useState([]);
   const [collection, setCollection] = useState([]);
+  const [videoMovie, setVideoMovie] = useState([]);
+  const [videoOne, setVideoOne] = useState(null);
 
   useEffect(() => {
     axios({
       method: "get",
-      url: `https://api.themoviedb.org/3/movie/${movieId}?api_key=af0a6e78cf2f5300726297b7f6e4d22c&language=en-US`,
+      url: `https://api.themoviedb.org/3/movie/${movieId}?api_key=af0a6e78cf2f5300726297b7f6e4d22c&language=en-US&append_to_response=videos`,
       responseType: "json",
     }).then((res) => setMovieOne(res.data));
   }, [movieId]);
 
   useEffect(() => {
-    if (movieOne && movieOne.genres) {
-      setGenreOne(movieOne.genres);
+    if (movieOne) {
+      setGenreOne(movieOne.genres || []);
+      setCollection(movieOne.belongs_to_collection || {});
+      setVideoMovie(movieOne.videos?.results || []);
     }
   }, [movieOne]);
 
   useEffect(() => {
-    if (movieOne && movieOne.belongs_to_collection) {
-      setCollection(movieOne.belongs_to_collection);
+    if (videoMovie) {
+      videoMovie.forEach((video) => {
+        if (video.type === "Trailer") {
+          setVideoOne(video);
+        }
+      });
     }
-  }, [movieOne]);
+  }, [videoMovie]);
 
   return (
     <div>
@@ -58,6 +67,14 @@ const ShowFilm = () => {
         <div>
           <h4>Synopsis</h4>
           <p>{movieOne.overview}</p>
+        </div>
+        <div>
+          <h4>Video</h4>
+          {videoOne ? (
+            <PlayerTrailer key={videoOne.id} videoOne={videoOne} />
+          ) : (
+            <p>No trailer found</p>
+          )}
         </div>
 
         {Object.keys(collection).length > 0 ? (

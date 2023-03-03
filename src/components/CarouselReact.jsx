@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const CarouselReact = () => {
   const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()]);
@@ -23,11 +24,13 @@ const CarouselReact = () => {
         <div className="embla__container">
           {moviesTrending.map((movie, index) => (
             <div key={index} className="embla__slide">
-              <h2>{movie.original_title}</h2>
-              <img
-                src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
-                alt={"Poster of" + movie.original_title}
-              />
+              <Link to={`/movie/${movie.id}`}>
+                <h2>{movie.original_title}</h2>
+                <img
+                  src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
+                  alt={"Poster of" + movie.original_title}
+                />
+              </Link>
             </div>
           ))}
         </div>

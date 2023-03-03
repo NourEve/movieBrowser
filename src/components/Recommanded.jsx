@@ -13,11 +13,19 @@ const Recommanded = ({ idMovie }) => {
     }).then((res) => setRecommandation(res.data.results));
   }, [idMovie]);
 
-  console.log(recommandation);
-
   return (
     <div>
-      <p>test</p>
+      {recommandation.map((movie, index) => (
+        <Link key={index} to={`/movie/${movie.id}`}>
+          <div>
+            <img
+              src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path}
+              alt={"Poster of" + movie.original_title}
+            />
+            <h5>{movie.original_title}</h5>
+          </div>
+        </Link>
+      ))}
     </div>
   );
 };
