@@ -15,8 +15,6 @@ const ChildrenGenre = () => {
     }).then((res) => setFilterGenre(res.data.results));
   }, [genreId]);
 
-  console.log(filterGenre);
-
   return (
     <div>
       {filterGenre.map((movie, index) => (
