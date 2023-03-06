@@ -7,6 +7,7 @@ import SearchPage from "./SearchPage";
 import ProfilePage from "./ProfilePage";
 import ChildrenGenre from "./components/ChildrenGenre";
 import ShowFilm from "./components/ShowFilm";
+import SearchMovie from "./components/SearchMovie";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
     path: "search",
     element: <SearchPage />,
     children: [
+      {
+        path: "",
+        element: <SearchMovie />,
+      },
       {
         path: "genre/:genreId",
         element: <ChildrenGenre />,

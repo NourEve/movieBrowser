@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
@@ -8,6 +8,8 @@ import axios from "axios";
 
 const SearchPage = () => {
   const [filterGenre, setFilterGenre] = useState([]);
+  const [updated, setUpdated] = useState("");
+  const inputRef = useRef(null);
 
   useEffect(() => {
     axios({
@@ -19,12 +21,16 @@ const SearchPage = () => {
     });
   }, []);
 
+  const handleClick = () => {
+    setUpdated(inputRef.current.value);
+  };
+
   return (
     <div>
       <Header />
-      <SearchBar />
+      <SearchBar inputRef={inputRef} onClick={handleClick} />
       <NavGenres filterGenre={filterGenre} />
-      <Outlet />
+      <Outlet context={[updated, setUpdated]} />
       <Navigation />
     </div>
   );

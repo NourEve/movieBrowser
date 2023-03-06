@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ inputRef, onClick }) => {
   return (
     <div>
-      <p>SearchBar</p>
+      <input ref={inputRef} type="text" placeholder="Search here" id="search" />
+      <button onClick={onClick}>Search</button>
     </div>
   );
 };
