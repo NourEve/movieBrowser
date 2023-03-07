@@ -1,4 +1,5 @@
 //Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato:wght@400;700&display=swap');
 
 //Variables
 $grayIcons : #DADADA;
@@ -19,12 +20,26 @@ $grayText : #BCBCBC;
       backdrop-filter: blur(2.405px);
 }
 
+@mixin fontLato ($weight, $size, $color) {
+      font-weight: $weight;
+      font-size: $size;
+      color: $color;
+      font-family: 'Lato', sans-serif;
+}
+
+@mixin fontInter ($size, $color) {
+      font-weight: 500;
+      font-size: $size;
+      color: $color;
+      font-family: 'Inter', sans-serif;
+}
+
 //Reset
 * {
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      background-color: #000000;
+      background-color: #15141F;
       color: white;
 }
 

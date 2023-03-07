@@ -1,9 +1,18 @@
 .header {
+      display: flex;
+      justify-content: space-between;
+      margin: 5%;
+      margin-bottom: 8%;
+
       &__title {
-            color: white;
+            @include fontLato(400, 7vw, white);
 
             &--color {
                   @include gradientText;
             }
+      }
+
+      &__logo {
+            width: 10%;
       }
 }
