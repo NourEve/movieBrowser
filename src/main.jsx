@@ -16,11 +16,11 @@ const router = createBrowserRouter([
     errorElement: <Homepage />,
   },
   {
-    path: "search",
+    path: "catalog",
     element: <SearchPage />,
     children: [
       {
-        path: "",
+        path: "search",
         element: <SearchMovie />,
       },
       {

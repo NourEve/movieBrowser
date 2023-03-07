@@ -10,7 +10,7 @@ const Navigation = () => {
       <NavLink to={"/"}>
         <IconHome width="50px" height="50px" onClick={() => alert("pink")} />
       </NavLink>
-      <NavLink to={"/search"}>
+      <NavLink to={"/catalog"}>
         <IconBxSearch width="50px" height="50px" />
       </NavLink>
       <NavLink to={"/profile"}>
