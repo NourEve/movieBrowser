@@ -9,7 +9,7 @@
       }
 
       &__slide {
-            flex: 0 0 80%;
+            flex: 0 0 60%;
             min-width: 0;
             position: relative;
             overflow: hidden;
@@ -42,5 +42,5 @@
 }
 
 .movieScale {
-      transform: scale(1);
+      transform: scale(1.5);
 }
