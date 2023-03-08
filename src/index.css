@@ -17,3 +17,8 @@
 .active path {
   fill: url(#gradient);
 }
+
+* {
+  color: white;
+  font-family: "Lato", sans-serif;
+}
