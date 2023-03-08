@@ -12,6 +12,11 @@
   .gradient {
     background: linear-gradient(244.07deg, #ff8f71 47.24%, #ef2d1a 120.34%);
   }
+  .background-glass {
+    background: rgba(218, 218, 218, 0.3);
+    backdrop-filter: blur(2.405px);
+    border-radius: 4vw;
+  }
 }
 
 .active path {
