@@ -1,0 +1,19 @@
+.embla {
+      overflow: hidden;
+      color: white;
+
+      &__container {
+            display: flex;
+      }
+
+      &__slide {
+            flex: 0 0 100%;
+            min-width: 0;
+      }
+}
+
+.carousel {
+      &__title {
+            margin-top: 10%;
+      }
+}

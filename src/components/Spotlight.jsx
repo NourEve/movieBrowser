@@ -29,18 +29,18 @@ const Spotlight = () => {
   }, [movieRecommendation]);
 
   return (
-    <div className="w-10/12 m-auto mb-[5%]">
+    <div className="">
       <Link to={`/movie/${movieOne.id}`} className="spotlight__link">
         <img
           src={"https://image.tmdb.org/t/p/w500" + movieOne.backdrop_path}
           alt={"Poster of" + movieOne.original_title}
-          className="rounded-3xl relative"
+          className=""
         />
-        <div className="background-glass flex w-3/5 h-[8%] absolute top-[29%] right-[30%]">
+        <div className="">
           <IconPlay className="m-[5%]" width="25px" height="25px" />
-          <div className="spotlight__titles--display flex-col m-[5%]">
-            <h2 className="text-primaryGray text-[3vw]">Movie Spotlight</h2>
-            <h3 className="text-[4vw] ">{movieOne.original_title}</h3>
+          <div className="spotlight__titles--display">
+            <h2 className="">Movie Spotlight</h2>
+            <h3 className="">{movieOne.original_title}</h3>
           </div>
         </div>
       </Link>

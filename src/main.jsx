@@ -7,7 +7,7 @@ import ProfilePage from "./ProfilePage";
 import ChildrenGenre from "./components/ChildrenGenre";
 import ShowFilm from "./components/ShowFilm";
 import SearchMovie from "./components/SearchMovie";
-import "./index.css";
+import "./index.scss";
 
 const router = createBrowserRouter([
   {
