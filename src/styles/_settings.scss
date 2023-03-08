@@ -16,8 +16,13 @@ $grayText : #BCBCBC;
       -webkit-text-fill-color: transparent;
 }
 
-@mixin blur () {
-      backdrop-filter: blur(2.405px);
+@mixin blur ($radius) {
+      background: rgba(218, 218, 218, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(2.5px);
+      -webkit-backdrop-filter: blur(2.5px);
+      border-radius: $radius;
+      border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 @mixin fontLato ($weight, $size, $color) {
@@ -39,8 +44,11 @@ $grayText : #BCBCBC;
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      background-color: #15141F;
       color: white;
+}
+
+body {
+      background-color: #15141F;
 }
 
 li {

@@ -1,6 +1,7 @@
 .spotlight {
       width: 85%;
       margin: auto;
+      position: relative;
 
       &__link {
             text-decoration: none;
@@ -13,12 +14,36 @@
       }
 
       &__titles {
+            position: absolute;
+            display: flex;
+            width: 60%;
+            height: 30%;
+            @include blur(4vw);
+            bottom: 5%;
+            left: 2.5%;
+
             &--play {
-                  // @include gradient;
+                  width: 30%;
+                  margin: auto;
             }
 
-            &--subtitle {}
+            &--display {
+                  display: flex;
+                  flex-direction: column;
+                  width: 70%;
+            }
 
-            &--movie {}
+            &--subtitle {
+                  @include fontLato(400, 3.5vw, $grayText);
+                  margin-top: 5%;
+            }
+
+            &--movie {
+                  @include fontLato(400, 4.5vw, white);
+                  margin-top: 2.5%;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+            }
       }
 }
