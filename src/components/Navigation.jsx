@@ -8,7 +8,7 @@ const Navigation = () => {
   return (
     <nav>
       <NavLink to={"/"}>
-        <IconHome width="50px" height="50px" onClick={() => alert("pink")} />
+        <IconHome width="50px" height="50px" />
       </NavLink>
       <NavLink to={"/catalog"}>
         <IconBxSearch width="50px" height="50px" />

@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Homepage from "./Homepage";
-import "./styles/index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SearchPage from "./SearchPage";
 import ProfilePage from "./ProfilePage";
 import ChildrenGenre from "./components/ChildrenGenre";
 import ShowFilm from "./components/ShowFilm";
 import SearchMovie from "./components/SearchMovie";
+import "./index.css";
 
 const router = createBrowserRouter([
   {

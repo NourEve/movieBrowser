@@ -3,8 +3,8 @@ import React from "react";
 const Header = () => {
   return (
     <div className="header">
-      <h1 className="header__title">
-        <span className="header__title--color">Movie</span>+
+      <h1 className="text-white font-lato text-2xl	font-normal">
+        <span className="gradient-text">Movie</span>+
       </h1>
       <img
         className="header__logo"

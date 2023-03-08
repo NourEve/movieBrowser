@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato:wght@400;700&display=swap");
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(244.07deg, #ff8f71 47.24%, #ef2d1a 120.34%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gradient {
+    background: linear-gradient(244.07deg, #ff8f71 47.24%, #ef2d1a 120.34%);
+  }
+}
+
+.active path {
+  fill: url(#gradient);
+}

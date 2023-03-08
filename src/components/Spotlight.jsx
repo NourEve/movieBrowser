@@ -37,12 +37,7 @@ const Spotlight = () => {
           className="spotlight__picture"
         />
         <div className="spotlight__titles">
-          <IconPlay
-            className="spotlight__titles--play text-pink-800"
-            width="25px"
-            height="25px"
-            //style={{ color: "pink" }}
-          />
+          <IconPlay className="" width="25px" height="25px" />
           <div className="spotlight__titles--display">
             <h2 className="spotlight__titles--subtitle">Movie Spotlight</h2>
             <h3 className="spotlight__titles--movie">
