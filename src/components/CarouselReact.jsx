@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
+import ClassNames from "embla-carousel-class-names";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
 const CarouselReact = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: false }, [WheelGesturesPlugin()]);
+  const classNamesOptions = { selected: "movieScale" };
+  const [emblaRef] = useEmblaCarousel({ loop: false, skipSnaps: true }, [
+    WheelGesturesPlugin(),
+    ClassNames(classNamesOptions),
+  ]);
   const [moviesTrending, setMoviesTrending] = useState([]);
 
   useEffect(() => {
