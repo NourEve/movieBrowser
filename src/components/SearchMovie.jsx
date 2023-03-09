@@ -19,20 +19,17 @@ const SearchMovie = () => {
 
   return (
     <div>
-      {movieSearch.length === 0 && <p>What are we looking at today?</p>}
-      <div>
-        {movieSearch.map((movie, index) => (
-          <Link key={index} to={`/movie/${movie.id}`}>
-            <div>
-              <img
-                src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
-                alt={"Poster of" + movie.original_title}
-              />
-              <h3>{movie.original_title}</h3>
-            </div>
-          </Link>
-        ))}
-      </div>
+      {movieSearch.map((movie, index) => (
+        <Link key={index} to={`/movie/${movie.id}`}>
+          <div>
+            <img
+              src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
+              alt={"Poster of" + movie.original_title}
+            />
+            <h3>{movie.original_title}</h3>
+          </div>
+        </Link>
+      ))}
     </div>
   );
 };

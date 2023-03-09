@@ -8,6 +8,7 @@ import ChildrenGenre from "./components/ChildrenGenre";
 import ShowFilm from "./components/ShowFilm";
 import SearchMovie from "./components/SearchMovie";
 import "./index.scss";
+import Today from "./components/Today";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     path: "catalog",
     element: <SearchPage />,
     children: [
+      {
+        path: "",
+        element: <Today />,
+      },
       {
         path: "search",
         element: <SearchMovie />,

@@ -3,9 +3,13 @@ import { NavLink } from "react-router-dom";
 const NavGenres = ({ filterGenre }) => {
   return (
     <div>
-      <nav>
+      <nav className="navGenre">
         {filterGenre.map((genre, index) => (
-          <NavLink key={index} to={`genre/${genre.id}`}>
+          <NavLink
+            className="navGenre__link"
+            key={index}
+            to={`genre/${genre.id}`}
+          >
             {genre.name}
           </NavLink>
         ))}
