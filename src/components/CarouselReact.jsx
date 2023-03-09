@@ -4,6 +4,7 @@ import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import ClassNames from "embla-carousel-class-names";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import IconStar from "../assets/IconStar";
 
 const CarouselReact = () => {
   const classNamesOptions = { selected: "movieScale" };
@@ -36,7 +37,16 @@ const CarouselReact = () => {
                   alt={"Poster of" + movie.original_title}
                   className="embla__slide__img"
                 />
-                <h2 className="embla__slide__title">{movie.original_title}</h2>
+                <div className="embla__slide__average">
+                  <p className="embla__slide--subtitle">IMDb</p>
+                  <div className="embla__slide--noteAndStar">
+                    <IconStar width="3vw" height="3vw" />
+                    <p className="embla__slide--note">{movie.vote_average}</p>
+                  </div>
+                </div>
+                <div className="embla__slide__title">
+                  <h2>{movie.original_title}</h2>
+                </div>
               </Link>
             </div>
           ))}

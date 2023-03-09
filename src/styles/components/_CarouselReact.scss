@@ -25,7 +25,49 @@
             }
 
             &__title {
+                  display: flex;
                   position: absolute;
+                  bottom: 2.5%;
+                  @include blur(2vw);
+                  left: 10%;
+                  width: 80%;
+                  height: 20%;
+                  text-align: center;
+
+                  h2 {
+                        @include fontLato(400, 4.5vw, white);
+                        margin: auto;
+                  }
+
+            }
+
+            &__average {
+                  position: absolute;
+                  @include blur(2vw);
+                  top: 5%;
+                  right: 5%;
+                  display: flex;
+                  flex-direction: column;
+                  width: 25%;
+                  height: 12%;
+
+
+            }
+
+            &--subtitle {
+                  @include fontLato(400, 2vw, white);
+                  margin: 5%;
+            }
+
+            &--noteAndStar {
+                  display: flex;
+                  flex-direction: row;
+            }
+
+            &--star {}
+
+            &--note {
+                  @include fontLato(400, 3.5vw, white);
             }
       }
 }
@@ -42,5 +84,5 @@
 }
 
 .movieScale img {
-      transform: scale(1.5);
+      //transform: scale(1.5);
 }
