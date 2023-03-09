@@ -6,15 +6,15 @@ import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <nav>
+    <nav className="navigation">
       <NavLink to={"/"}>
-        <IconHome width="50px" height="50px" />
+        <IconHome width="9vw" height="9vw" />
       </NavLink>
       <NavLink to={"/catalog"}>
-        <IconBxSearch width="50px" height="50px" />
+        <IconBxSearch width="9vw" height="9vw" />
       </NavLink>
       <NavLink to={"/profile"}>
-        <IconProfile width="50px" height="50px" />
+        <IconProfile width="9vw" height="9vw" />
       </NavLink>
     </nav>
   );

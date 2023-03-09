@@ -1,8 +1,8 @@
 import * as React from "react";
 
-function IconHome() {
+function IconHome(props) {
   return (
-    <svg viewBox="0 0 1024 1024" fill="currentColor" height="3em" width="3em">
+    <svg viewBox="0 0 1024 1024" fill="currentColor" {...props}>
       <defs>
         <linearGradient id="gradient">
           <stop offset="0%" stopColor="#FF8F71" />

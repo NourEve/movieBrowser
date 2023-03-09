@@ -41,7 +41,9 @@ const CarouselReact = () => {
                   <p className="embla__slide--subtitle">IMDb</p>
                   <div className="embla__slide--noteAndStar">
                     <IconStar width="3vw" height="3vw" />
-                    <p className="embla__slide--note">{movie.vote_average}</p>
+                    <p className="embla__slide--note">
+                      {Math.round(movie.vote_average * 10) / 10}
+                    </p>
                   </div>
                 </div>
                 <div className="embla__slide__title">

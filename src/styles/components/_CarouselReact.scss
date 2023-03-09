@@ -9,7 +9,7 @@
       }
 
       &__slide {
-            flex: 0 0 60%;
+            flex: 0 0 70%;
             min-width: 0;
             position: relative;
             overflow: hidden;
@@ -50,8 +50,7 @@
                   flex-direction: column;
                   width: 25%;
                   height: 12%;
-
-
+                  padding: 2%
             }
 
             &--subtitle {
@@ -62,12 +61,12 @@
             &--noteAndStar {
                   display: flex;
                   flex-direction: row;
+                  align-items: center;
             }
-
-            &--star {}
 
             &--note {
                   @include fontLato(400, 3.5vw, white);
+                  margin-left: 5%;
             }
       }
 }
@@ -77,12 +76,12 @@
       flex-direction: column;
 
       &__title {
-            margin-top: 10%;
+            margin-top: 5%;
             @include fontLato(400, 6.5vw, white);
             margin-left: 5%;
       }
 }
 
-.movieScale img {
-      //transform: scale(1.5);
-}
+// .movieScale:nth-of-type(2) {
+//       transform: scale(1.1);
+// }

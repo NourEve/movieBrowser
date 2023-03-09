@@ -1,0 +1,13 @@
+.navigation {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      position: fixed;
+      bottom: 1%;
+      width: 100%;
+}
+
+.active path {
+      fill: url(#gradient);
+}
