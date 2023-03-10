@@ -1,6 +1,26 @@
 .searchBar {
-      width: 10%;
       margin-bottom: 5%;
       display: flex;
-      margin: auto;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      height: 5vh;
+
+
+      &__button {
+            width: 10%;
+            height: 100%;
+            background-color: $darkBlue;
+            border: none;
+            padding: auto;
+            border-radius: 3vw 0 0 3vw;
+      }
+
+      &__input {
+            @extend .searchBar__button;
+            width: 40%;
+            padding-left: 2%;
+            @include fontInter(4vw, #BBBBBB);
+            border-radius: 0 3vw 3vw 0;
+      }
 }
