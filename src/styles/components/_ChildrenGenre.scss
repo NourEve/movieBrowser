@@ -1,0 +1,21 @@
+.childrenGenre {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 47% auto 15%;
+
+      &__link {
+            width: 45%;
+            margin: 2.5%;
+            text-decoration: none;
+
+            &__img {
+                  width: 100%;
+                  border-radius: 6vw;
+            }
+
+            &__title {
+                  @include fontLato(400, 3vw, white);
+            }
+      }
+}

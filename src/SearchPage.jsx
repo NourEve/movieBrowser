@@ -28,9 +28,11 @@ const SearchPage = () => {
 
   return (
     <div>
-      <Header />
-      <SearchBar inputRef={inputRef} onClick={handleClick} />
-      <NavGenres filterGenre={filterGenre} />
+      <div className="fixed">
+        <Header />
+        <SearchBar inputRef={inputRef} onClick={handleClick} />
+        <NavGenres filterGenre={filterGenre} />
+      </div>
       <Outlet context={[updated, setUpdated]} />
       <Navigation />
     </div>

@@ -5,6 +5,7 @@
 $grayIcons : #DADADA;
 $grayText : #BCBCBC;
 $darkBlue : #211F30;
+$background: #15141F;
 
 //Mixins
 @mixin gradient () {
@@ -49,7 +50,7 @@ $darkBlue : #211F30;
 }
 
 body {
-      background-color: #15141F;
+      background-color: $background;
 }
 
 li {

@@ -16,16 +16,19 @@ const ChildrenGenre = () => {
   }, [genreId]);
 
   return (
-    <div>
+    <div className="childrenGenre">
       {filterGenre.map((movie, index) => (
-        <Link key={index} to={`/movie/${movie.id}`}>
-          <div>
-            <img
-              src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
-              alt={"Poster of" + movie.original_title}
-            />
-            <h3>{movie.original_title}</h3>
-          </div>
+        <Link
+          key={index}
+          to={`/movie/${movie.id}`}
+          className="childrenGenre__link"
+        >
+          <img
+            src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
+            alt={"Poster of" + movie.original_title}
+            className="childrenGenre__link__img"
+          />
+          <h3 className="childrenGenre__link__title">{movie.original_title}</h3>
         </Link>
       ))}
     </div>
