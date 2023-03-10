@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Collections from "./Collections";
-import Recommanded from "./Recommanded";
-import PlayerTrailer from "./PlayerTrailer";
-import IconClock from "../assets/IconClock";
-import IconStarGray from "../assets/IconStarGray";
-import IconArrow from "../assets/IconArrow";
+import Collections from "./components/Collections";
+import Recommanded from "./components/Recommanded";
+import PlayerTrailer from "./components/PlayerTrailer";
+import IconClock from "./assets/IconClock";
+import IconStarGray from "./assets/IconStarGray";
+import IconArrow from "./assets/IconArrow";
 import { useNavigate } from "react-router-dom";
 
 const ShowFilm = () => {
@@ -114,8 +114,8 @@ const ShowFilm = () => {
             <Collections idCollection={collection.id} />
           </section>
         ) : (
-          <section>
-            <h4>Related Movies</h4>
+          <section className="showFilm__related">
+            <h4 className="showFilm__related--title">Related Movies</h4>
             <Recommanded idMovie={movieOne.id} />
           </section>
         )}

@@ -9,7 +9,6 @@
 
       &__poster {
             width: 100%;
-            height: auto;
             position: fixed;
             z-index: -1;
             top: 0;
@@ -74,10 +73,11 @@
                   @extend .showFilm__dateAndGenre__date;
                   width: 60%;
 
-                  &__allLink {
+                  &--allLink {
                         display: flex;
                         flex-direction: row;
-                        flex-wrap: wrap;
+                        overflow: scroll;
+                        white-space: nowrap;
                   }
 
                   &--link {
@@ -98,7 +98,7 @@
                   width: 95%;
                   position: absolute;
                   height: 0.2vw;
-                  bottom: -75%;
+                  bottom: -50%;
             }
       }
 
@@ -126,6 +126,13 @@
       }
 
       &__collection {
+            &--title {
+                  @include fontLato(500, 5vw, white);
+                  margin-bottom: 5%;
+            }
+      }
+
+      &__related {
             &--title {
                   @include fontLato(500, 5vw, white);
                   margin-bottom: 5%;

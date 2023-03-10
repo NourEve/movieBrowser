@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SearchPage from "./SearchPage";
 import ProfilePage from "./ProfilePage";
 import ChildrenGenre from "./components/ChildrenGenre";
-import ShowFilm from "./components/ShowFilm";
+import ShowFilm from "./ShowFilm";
 import SearchMovie from "./components/SearchMovie";
 import "./index.scss";
 import Today from "./components/Today";

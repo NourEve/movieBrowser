@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
+import { format } from "date-fns";
 
 const Collections = ({ idCollection }) => {
   const [collection, setCollection] = useState([]);
@@ -32,6 +33,13 @@ const Collections = ({ idCollection }) => {
                 />
                 <h5 className="collection__link__title">
                   {movie.original_title}
+                  <span className="childrenGenre__link__title childrenGenre__link__title--gray">
+                    {" (" +
+                      (movie.release_date
+                        ? format(new Date(movie.release_date), "yyyy")
+                        : "") +
+                      ")"}
+                  </span>
                 </h5>
               </Link>
             </div>
