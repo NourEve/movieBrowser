@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import useEmblaCarousel from "embla-carousel-react";
+import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 
 const Collections = ({ idCollection }) => {
   const [collection, setCollection] = useState([]);
+  const [emblaRef] = useEmblaCarousel({ loop: false, skipSnaps: true }, [
+    WheelGesturesPlugin(),
+  ]);
 
   useEffect(() => {
     axios({
@@ -14,19 +19,26 @@ const Collections = ({ idCollection }) => {
   }, [idCollection]);
 
   return (
-    <div>
-      {collection.map((movie, index) => (
-        <Link key={index} to={`/movie/${movie.id}`}>
-          <div>
-            <img
-              src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path}
-              alt={"Poster of " + movie.original_title}
-            />
-            <h5>{movie.original_title}</h5>
-          </div>
-        </Link>
-      ))}
-    </div>
+    <section className="collection collection--carousel">
+      <div className="collection__embla" ref={emblaRef}>
+        <div className="collection__embla__container">
+          {collection.map((movie, index) => (
+            <div key={index} className="collection__embla__slide">
+              <Link className="collection__link" to={`/movie/${movie.id}`}>
+                <img
+                  src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path}
+                  alt={"Poster of " + movie.original_title}
+                  className="collection__link__img"
+                />
+                <h5 className="collection__link__title">
+                  {movie.original_title}
+                </h5>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

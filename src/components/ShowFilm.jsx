@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import Collections from "./Collections";
 import Recommanded from "./Recommanded";
 import PlayerTrailer from "./PlayerTrailer";
+import IconClock from "../assets/IconClock";
+import IconStarGray from "../assets/IconStarGray";
 
 const ShowFilm = () => {
   const { movieId } = useParams();
@@ -41,52 +43,75 @@ const ShowFilm = () => {
   }, [videoMovie]);
 
   return (
-    <div>
+    <div className="showFilm">
       <img
         src={"https://image.tmdb.org/t/p/w500" + movieOne.poster_path}
         alt={"Poster of " + movieOne.original_title}
+        className="showFilm__poster"
       />
-      <h3>{movieOne.original_title}</h3>
-      <div>
-        <p>{movieOne.runtime} minutes</p>
-        <p>{movieOne.vote_average} (IMDb)</p>
-      </div>
-      <div>
-        <div>
-          <h4>Release date</h4>
-          <p>{movieOne.release_date}</p>
-        </div>
-        <div>
-          <h4>Genre</h4>
-          {genreOne.map((genre, index) => (
-            <Link key={index} to={`/search/genre/${genre.id}`}>
-              {genre.name}
-            </Link>
-          ))}
-        </div>
-        <div>
-          <h4>Synopsis</h4>
-          <p>{movieOne.overview}</p>
-        </div>
-        <div>
-          <h4>Video</h4>
+
+      <div className="showFilm__divAll">
+        <h3 className="showFilm__divAll__title">{movieOne.original_title}</h3>
+
+        <section className="showFilm__timeAndNote">
+          <IconClock />
+          <p className="showFilm__timeAndNote--text">
+            {movieOne.runtime} minutes
+          </p>
+          <IconStarGray />
+          <p className="showFilm__timeAndNote--text">
+            {Math.round(movieOne.vote_average * 10) / 10} (IMDb)
+          </p>
+        </section>
+
+        <section className="showFilm__dateAndGenre">
+          <div className="showFilm__dateAndGenre__date">
+            <h4 className="showFilm__dateAndGenre--title">Release date</h4>
+            <p className="showFilm__dateAndGenre__date--text">
+              {movieOne.release_date}
+            </p>
+          </div>
+
+          <div className="showFilm__dateAndGenre__genre">
+            <h4 className="showFilm__dateAndGenre--title">Genre</h4>
+            <div className="showFilm__dateAndGenre__genre--allLink">
+              {genreOne.map((genre, index) => (
+                <Link
+                  key={index}
+                  to={`/catalog/genre/${genre.id}`}
+                  className="showFilm__dateAndGenre__genre--link"
+                >
+                  {genre.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="showFilm__synopsis">
+          <h4 className="showFilm__synopsis--title">Synopsis</h4>
+          <p className="showFilm__synopsis--text">{movieOne.overview}</p>
+        </section>
+
+        <section className="showFilm__video">
+          <h4 className="showFilm__video--title">Trailer</h4>
           {videoOne ? (
             <PlayerTrailer key={videoOne.id} videoOne={videoOne} />
           ) : (
-            <p>No trailer found</p>
+            <p className="showFilm__video--error">No trailer found</p>
           )}
-        </div>
+        </section>
 
         {Object.keys(collection).length > 0 ? (
-          <div>
-            <h4>Collection</h4>
+          <section className="showFilm__collection">
+            <h4 className="showFilm__collection--title">Collection</h4>
             <Collections idCollection={collection.id} />
-          </div>
+          </section>
         ) : (
-          <div>
+          <section>
             <h4>Related Movies</h4>
             <Recommanded idMovie={movieOne.id} />
-          </div>
+          </section>
         )}
       </div>
     </div>

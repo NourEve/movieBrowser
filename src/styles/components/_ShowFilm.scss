@@ -1,0 +1,127 @@
+.showFilm {
+      &__poster {
+            width: 100%;
+            height: auto;
+            position: fixed;
+            z-index: -1;
+            top: 0;
+      }
+
+      &__divAll {
+            margin-top: 65vh;
+            background-color: $background;
+            padding: 5%;
+
+            &__title {
+                  @include fontLato(500, 6.5vw, white);
+                  margin-bottom: 5%;
+            }
+      }
+
+      &__timeAndNote {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 5%;
+            position: relative;
+
+            &--text {
+                  @include fontLato(400, 3vw, $grayText);
+                  margin-left: 2%;
+                  margin-right: 10%;
+            }
+
+            &::after {
+                  content: "";
+                  background-color: #515151;
+                  opacity: 0.5;
+                  width: 95%;
+                  position: absolute;
+                  height: 0.2vw;
+                  bottom: -75%;
+            }
+      }
+
+      &__dateAndGenre {
+            margin-top: 10%;
+            display: flex;
+            margin-bottom: 10%;
+            position: relative;
+
+            &__date {
+                  display: flex;
+                  flex-direction: column;
+                  width: 40%;
+
+                  &--text {
+                        @include fontLato (400, 3vw, $grayText);
+                  }
+            }
+
+            &--title {
+                  @include fontLato(500, 5vw, white);
+                  margin-bottom: 7%;
+            }
+
+            &__genre {
+                  @extend .showFilm__dateAndGenre__date;
+                  width: 60%;
+
+                  &__allLink {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                  }
+
+                  &--link {
+                        @extend .showFilm__dateAndGenre__date--text;
+                        text-decoration: none;
+                        margin-right: 5%;
+                        @include blur(5vw);
+                        border: 0.3vw solid rgba(250, 240, 202, 0.05);
+                        background-color: $background;
+                        padding: 3%;
+                  }
+            }
+
+            &::after {
+                  content: "";
+                  background-color: #515151;
+                  opacity: 0.5;
+                  width: 95%;
+                  position: absolute;
+                  height: 0.2vw;
+                  bottom: -75%;
+            }
+      }
+
+      &__synopsis {
+            margin-top: 15%;
+            margin-bottom: 7%;
+
+            &--title {
+                  @include fontLato(500, 5vw, white);
+                  margin-bottom: 5%;
+            }
+
+            &--text {
+                  @include fontLato (400, 3.5vw, $grayText);
+            }
+      }
+
+      &__video {
+            margin-bottom: 7%;
+
+            &--title {
+                  @include fontLato(500, 5vw, white);
+                  margin-bottom: 5%;
+            }
+      }
+
+      &__collection {
+            &--title {
+                  @include fontLato(500, 5vw, white);
+                  margin-bottom: 5%;
+            }
+      }
+
+}
