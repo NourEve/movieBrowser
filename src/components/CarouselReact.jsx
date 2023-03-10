@@ -34,7 +34,7 @@ const CarouselReact = () => {
               <Link to={`/movie/${movie.id}`}>
                 <img
                   src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
-                  alt={"Poster of" + movie.original_title}
+                  alt={"Poster of " + movie.original_title}
                   className="embla__slide__img"
                 />
                 <div className="embla__slide__average">

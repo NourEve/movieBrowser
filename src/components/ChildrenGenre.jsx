@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { format } from "date-fns";
 
 const ChildrenGenre = () => {
   const { genreId } = useParams();
@@ -25,10 +26,19 @@ const ChildrenGenre = () => {
         >
           <img
             src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
-            alt={"Poster of" + movie.original_title}
+            alt={"Poster of " + movie.original_title}
             className="childrenGenre__link__img"
           />
-          <h3 className="childrenGenre__link__title">{movie.original_title}</h3>
+          <h3 className="childrenGenre__link__title">
+            {movie.original_title}
+            <span className="childrenGenre__link__title childrenGenre__link__title--gray">
+              {" (" +
+                (movie.release_date
+                  ? format(new Date(movie.release_date), "yyyy")
+                  : "") +
+                ")"}
+            </span>
+          </h3>
         </Link>
       ))}
     </div>

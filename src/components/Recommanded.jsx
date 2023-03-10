@@ -20,7 +20,7 @@ const Recommanded = ({ idMovie }) => {
           <div>
             <img
               src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path}
-              alt={"Poster of" + movie.original_title}
+              alt={"Poster of " + movie.original_title}
             />
             <h5>{movie.original_title}</h5>
           </div>

@@ -33,7 +33,7 @@ const Spotlight = () => {
       <Link to={`/movie/${movieOne.id}`} className="spotlight__link">
         <img
           src={"https://image.tmdb.org/t/p/w500" + movieOne.backdrop_path}
-          alt={"Poster of" + movieOne.original_title}
+          alt={"Poster of " + movieOne.original_title}
           className="spotlight__picture"
         />
         <div className="spotlight__titles">

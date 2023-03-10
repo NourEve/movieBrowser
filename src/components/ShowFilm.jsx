@@ -44,7 +44,7 @@ const ShowFilm = () => {
     <div>
       <img
         src={"https://image.tmdb.org/t/p/w500" + movieOne.poster_path}
-        alt={"Poster of" + movieOne.original_title}
+        alt={"Poster of " + movieOne.original_title}
       />
       <h3>{movieOne.original_title}</h3>
       <div>

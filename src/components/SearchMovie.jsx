@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { format } from "date-fns";
 
 const SearchMovie = () => {
   const [updated, setUpdated] = useOutletContext();
@@ -18,16 +19,28 @@ const SearchMovie = () => {
   }, [updated]);
 
   return (
-    <div>
+    <div className="childrenGenre">
       {movieSearch.map((movie, index) => (
-        <Link key={index} to={`/movie/${movie.id}`}>
-          <div>
-            <img
-              src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
-              alt={"Poster of" + movie.original_title}
-            />
-            <h3>{movie.original_title}</h3>
-          </div>
+        <Link
+          key={index}
+          to={`/movie/${movie.id}`}
+          className="childrenGenre__link"
+        >
+          <img
+            src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
+            alt={"Poster of " + movie.original_title}
+            className="childrenGenre__link__img"
+          />
+          <h3 className="childrenGenre__link__title">
+            {movie.original_title}
+            <span className="childrenGenre__link__title childrenGenre__link__title--gray">
+              {" (" +
+                (movie.release_date
+                  ? format(new Date(movie.release_date), "yyyy")
+                  : "") +
+                ")"}
+            </span>
+          </h3>
         </Link>
       ))}
     </div>
