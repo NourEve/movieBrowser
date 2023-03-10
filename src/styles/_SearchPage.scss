@@ -6,3 +6,9 @@
       left: 0;
       width: 100%;
 }
+
+.searchPage__p {
+      margin-top: 100%;
+      text-align: center;
+      @include fontLato (700, 6vw, $grayText);
+}

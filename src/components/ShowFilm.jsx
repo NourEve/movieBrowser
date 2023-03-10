@@ -7,6 +7,8 @@ import Recommanded from "./Recommanded";
 import PlayerTrailer from "./PlayerTrailer";
 import IconClock from "../assets/IconClock";
 import IconStarGray from "../assets/IconStarGray";
+import IconArrow from "../assets/IconArrow";
+import { useNavigate } from "react-router-dom";
 
 const ShowFilm = () => {
   const { movieId } = useParams();
@@ -15,6 +17,7 @@ const ShowFilm = () => {
   const [collection, setCollection] = useState([]);
   const [videoMovie, setVideoMovie] = useState([]);
   const [videoOne, setVideoOne] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios({
@@ -44,6 +47,9 @@ const ShowFilm = () => {
 
   return (
     <div className="showFilm">
+      <button className="showFilm__iconArrow" onClick={() => navigate(-1)}>
+        <IconArrow />
+      </button>
       <img
         src={"https://image.tmdb.org/t/p/w500" + movieOne.poster_path}
         alt={"Poster of " + movieOne.original_title}

@@ -1,4 +1,12 @@
 .showFilm {
+      &__iconArrow {
+            position: absolute;
+            top: 2%;
+            left: 2%;
+            border: none;
+            background-color: rgba(250, 240, 202, 0);
+      }
+
       &__poster {
             width: 100%;
             height: auto;
