@@ -1,0 +1,51 @@
+.profilePage {
+      width: 100%;
+      margin: auto;
+
+      &__title {
+            @include fontLato(700, 7vw, white);
+            text-align: center;
+            margin-bottom: 10%;
+      }
+
+      &__logIn {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            &--label {
+                  @include fontLato(500, 4vw, white);
+                  margin-bottom: 5%;
+            }
+
+            &--input {
+                  @include fontLato(400, 4vw, $grayText);
+                  margin: 5% auto;
+                  @include blur(5vw);
+                  border: 0.3vw solid rgba(250, 240, 202, 0.05);
+                  background-color: $background;
+                  padding: 3%;
+                  width: 80%;
+            }
+      }
+
+      &__otherConnection {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 30%;
+            margin: 20% auto;
+      }
+
+      &__signUp {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            a {
+                  text-decoration: none;
+                  @include fontLato(400, 3vw, $grayText);
+                  margin-bottom: 5%;
+            }
+      }
+}
