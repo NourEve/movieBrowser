@@ -29,7 +29,7 @@ Création d'une application web de streaming :
 - Recherche d'un film dans la base de données
 - Vue sur un film choisi (note, synopsis, bande annonce, films liés)
 
-##Installation
+## Installation
 ```bash
   git clone (cléSSH) movieBrowser
   cd movieBrowser
@@ -37,7 +37,7 @@ Création d'une application web de streaming :
   npm run dev
 ```
 
-##Bugs
+## Bugs
 - Le carousel ne s'enclenche pas à chaque fois
 - Version desktop en construction
 
