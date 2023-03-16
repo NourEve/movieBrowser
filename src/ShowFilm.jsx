@@ -9,6 +9,7 @@ import IconClock from "./assets/IconClock";
 import IconStarGray from "./assets/IconStarGray";
 import IconArrow from "./assets/IconArrow";
 import { useNavigate } from "react-router-dom";
+import MediaQuery from "react-responsive";
 
 const ShowFilm = () => {
   const { movieId } = useParams();
@@ -48,7 +49,12 @@ const ShowFilm = () => {
   return (
     <div className="showFilm">
       <button className="showFilm__iconArrow" onClick={() => navigate(-1)}>
-        <IconArrow />
+        <MediaQuery maxWidth={480}>
+          <IconArrow width="6vw" height="6vw" />
+        </MediaQuery>
+        <MediaQuery minWidth={481} maxWidth={1024}>
+          <IconArrow width="5vw" height="5vw" />
+        </MediaQuery>
       </button>
       <img
         src={"https://image.tmdb.org/t/p/w500" + movieOne.poster_path}
@@ -60,11 +66,23 @@ const ShowFilm = () => {
         <h3 className="showFilm__divAll__title">{movieOne.original_title}</h3>
 
         <section className="showFilm__timeAndNote">
-          <IconClock />
+          <MediaQuery maxWidth={768}>
+            <IconClock />
+          </MediaQuery>
+          <MediaQuery minWidth={769}>
+            <IconClock width="3vw" height="3vw" />
+          </MediaQuery>
+
           <p className="showFilm__timeAndNote--text">
             {movieOne.runtime} minutes
           </p>
-          <IconStarGray />
+          <MediaQuery maxWidth={768}>
+            <IconStarGray />
+          </MediaQuery>
+          <MediaQuery minWidth={769}>
+            <IconStarGray width="3vw" height="3vw" />
+          </MediaQuery>
+
           <p className="showFilm__timeAndNote--text">
             {Math.round(movieOne.vote_average * 10) / 10} (IMDb)
           </p>

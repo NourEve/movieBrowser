@@ -44,3 +44,23 @@
             }
       }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+      .childrenGenre {
+            margin: 30% auto 10%;
+
+            &__link {
+                  width: 40%;
+                  margin: 5%;
+                  text-decoration: none;
+
+                  &__img {
+                        border-radius: 4vw;
+                  }
+
+                  &__title {
+                        @include fontLato(400, 3.5vw, white);
+                  }
+            }
+      }
+}

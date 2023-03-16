@@ -30,6 +30,17 @@ const Navigation = () => {
           <IconProfile width="6vw" height="6vw" />
         </NavLink>
       </MediaQuery>
+      <MediaQuery minWidth={769} maxWidth={1024}>
+        <NavLink to={"/"}>
+          <IconHome width="6vw" height="6vw" />
+        </NavLink>
+        <NavLink to={"/catalog"}>
+          <IconBxSearch width="6vw" height="6vw" />
+        </NavLink>
+        <NavLink to={"/profile"}>
+          <IconProfile width="6vw" height="6vw" />
+        </NavLink>
+      </MediaQuery>
     </nav>
   );
 };

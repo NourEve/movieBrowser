@@ -126,3 +126,45 @@
             }
       }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+      .embla {
+            padding: 4rem;
+            margin-top: -3%;
+            margin-bottom: 3%;
+
+            &__slide {
+                  flex: 0 0 50%;
+                  margin-left: 4%;
+                  margin-right: 4%;
+                  border-radius: 4vw;
+
+                  &__title {
+                        @include blur(1.5vw);
+
+                        h2 {
+                              @include fontLato(400, 3vw, white);
+                        }
+                  }
+
+                  &__average {
+                        @include blur(1.5vw);
+                  }
+
+                  &--subtitle {
+                        @include fontLato(400, 1.5vw, white);
+                  }
+
+                  &--note {
+                        @include fontLato(400, 2.5vw, white);
+                  }
+            }
+      }
+
+      .carousel {
+            &__title {
+                  margin-top: 4%;
+                  @include fontLato(400, 4.5vw, white);
+            }
+      }
+}

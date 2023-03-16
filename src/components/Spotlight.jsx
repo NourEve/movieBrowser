@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import IconPlay from "../assets/IconPlay";
+import MediaQuery from "react-responsive";
 
 const Spotlight = () => {
   const [movieRecommendation, setMovieRecommendation] = useState([]);
@@ -37,11 +38,21 @@ const Spotlight = () => {
           className="spotlight__picture"
         />
         <div className="spotlight__titles">
-          <IconPlay
-            className="spotlight__titles--play"
-            width="25px"
-            height="25px"
-          />
+          <MediaQuery maxWidth={768}>
+            <IconPlay
+              className="spotlight__titles--play"
+              width="25px"
+              height="25px"
+            />
+          </MediaQuery>
+          <MediaQuery minWidth={769}>
+            <IconPlay
+              className="spotlight__titles--play"
+              width="50px"
+              height="50px"
+            />
+          </MediaQuery>
+
           <div className="spotlight__titles--display">
             <h2 className="spotlight__titles--subtitle">Movie Spotlight</h2>
             <h3 className="spotlight__titles--movie">

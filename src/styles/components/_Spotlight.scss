@@ -70,3 +70,27 @@
             }
       }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+      .spotlight {
+            width: 75%;
+
+            &__picture {
+
+                  border-radius: 3vw;
+            }
+
+            &__titles {
+                  @include blur(3vw);
+                  height: 25%;
+
+                  &--subtitle {
+                        @include fontLato(400, 2vw, $grayText);
+                  }
+
+                  &--movie {
+                        @include fontLato(400, 3vw, white);
+                  }
+            }
+      }
+}

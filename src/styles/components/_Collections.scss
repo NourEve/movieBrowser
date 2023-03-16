@@ -35,5 +35,56 @@
                   text-align: center;
             }
       }
+}
 
+@media screen and (min-width: 481px) and (max-width: 768px) {
+      .collection {
+
+            &__embla {
+
+                  &__slide {
+                        flex: 0 0 50%;
+                        margin-left: 3%;
+                        margin-right: 3%;
+                  }
+            }
+
+            &__link {
+                  margin-bottom: 7%;
+
+                  &__img {
+                        border-radius: 4vw;
+                  }
+
+                  &__title {
+                        @include fontLato(400, 2.5vw, white);
+                  }
+            }
+      }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+      .collection {
+
+            &__embla {
+
+                  &__slide {
+                        flex: 0 0 50%;
+                        margin-left: 3%;
+                        margin-right: 3%;
+                  }
+            }
+
+            &__link {
+                  margin-bottom: 7%;
+
+                  &__img {
+                        border-radius: 4vw;
+                  }
+
+                  &__title {
+                        @include fontLato(400, 2.5vw, white);
+                  }
+            }
+      }
 }
