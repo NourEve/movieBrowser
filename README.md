@@ -39,7 +39,8 @@ Création d'une application web de streaming :
 
 ## Bugs
 - Le carousel ne s'enclenche pas à chaque fois
-- Version desktop en construction
+- Le carousel ne fonctionne pas sur la version desktop en vue unique d'un film
+- Quelques éléments de design à replacer
 
 ## Screenshots
 ![Design sans titre2](https://user-images.githubusercontent.com/117478874/225249708-27094298-0470-4c75-9da2-a7fc4861447a.png)
