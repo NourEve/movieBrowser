@@ -34,3 +34,21 @@
             }
       }
 }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+      .navGenre {
+
+            &__link {
+                  margin-left: 4%;
+                  @include fontLato(400, 3.5vw, white);
+            }
+
+            .active {
+
+                  &::after {
+                        height: 0.4vw;
+                        bottom: 30%;
+                  }
+            }
+      }
+}

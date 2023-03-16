@@ -24,3 +24,19 @@
             border-radius: 0 3vw 3vw 0;
       }
 }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+      .searchBar {
+            margin-bottom: 4%;
+
+
+            &__button {
+                  border-radius: 2vw 0 0 2vw;
+            }
+
+            &__input {
+                  @include fontInter(3vw, #BBBBBB);
+                  border-radius: 0 2vw 2vw 0;
+            }
+      }
+}

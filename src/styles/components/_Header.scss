@@ -16,3 +16,18 @@
             width: 10%;
       }
 }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+      .header {
+            margin: 4%;
+            margin-bottom: 5%;
+
+            &__title {
+                  @include fontLato(400, 4vw, white);
+            }
+
+            &__logo {
+                  width: 8%;
+            }
+      }
+}

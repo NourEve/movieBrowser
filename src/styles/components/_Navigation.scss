@@ -14,3 +14,10 @@
 .active path {
       fill: url(#gradient);
 }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+      .navigation {
+            width: 100%;
+            height: 8%;
+      }
+}

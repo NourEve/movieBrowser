@@ -49,3 +49,42 @@
             }
       }
 }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+      .profilePage {
+
+            &__title {
+                  @include fontLato(700, 6vw, white);
+            }
+
+            &__logIn {
+
+                  &--label {
+                        @include fontLato(500, 3vw, white);
+                        margin-bottom: 0%;
+                  }
+
+                  &--input {
+                        @include fontLato(400, 3vw, $grayText);
+                        margin: 4% auto;
+                        @include blur(4vw);
+                        border: 0.2vw solid rgba(250, 240, 202, 0.05);
+                        background-color: $background;
+                        width: 60%;
+                        height: 6vh;
+                  }
+            }
+
+            &__otherConnection {
+                  margin: 10% auto;
+            }
+
+            &__signUp {
+
+                  a {
+                        @include fontLato(400, 2vw, $grayText);
+                        margin-bottom: 2.5%;
+                  }
+            }
+      }
+}

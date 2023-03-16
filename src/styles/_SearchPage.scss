@@ -12,3 +12,10 @@
       text-align: center;
       @include fontLato (700, 6vw, $grayText);
 }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+      .searchPage__p {
+            margin-top: 70%;
+            @include fontLato (700, 5vw, $grayText);
+      }
+}
