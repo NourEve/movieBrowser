@@ -127,3 +127,72 @@
             }
       }
 }
+
+@media screen and (min-width: 1025px) {
+      .profilePage {
+
+            &__connection {
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                  align-items: center;
+                  width: 70%;
+                  margin: auto;
+            }
+
+
+            &__titleAndForm {
+                  width: 50%;
+                  margin: 0;
+            }
+
+            &__otherAndSignup {
+                  @extend .profilePage__titleAndForm;
+            }
+
+            &__title {
+                  @include fontLato(700, 2vw, white);
+                  margin-bottom: 10%;
+                  margin-left: -100%;
+            }
+
+            &__logIn {
+
+                  &--label {
+                        @include fontLato(500, 1.5vw, white);
+                        margin-bottom: 3%;
+                  }
+
+                  &--input {
+                        @include fontLato(400, 1.5vw, $grayText);
+                        margin: 5% auto;
+                        @include blur(3vw);
+                        border: 0.15vw solid rgba(250, 240, 202, 0.05);
+                        background-color: $background;
+                        padding: 1%;
+                        width: 30%;
+                  }
+            }
+
+            &__otherConnection {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-around;
+                  width: 30%;
+                  margin: 0% auto 5%;
+            }
+
+            &__signUp {
+                  display: flex;
+                  flex-direction: column;
+                  text-align: center;
+
+                  a {
+                        text-decoration: none;
+                        @include fontLato(400, 1vw, $grayText);
+                        margin-bottom: 5%;
+                  }
+            }
+      }
+
+}

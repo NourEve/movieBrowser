@@ -64,3 +64,24 @@
             }
       }
 }
+
+@media screen and (min-width: 1025px) {
+      .childrenGenre {
+            margin: 15% 5% 5% 5%;
+
+            &__link {
+                  width: 20%;
+
+                  &__img {
+                        width: 100%;
+                        border-radius: 2vw;
+                  }
+
+                  &__title {
+                        @include fontLato(400, 1vw, white);
+                        text-align: center;
+
+                  }
+            }
+      }
+}

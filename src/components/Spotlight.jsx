@@ -41,15 +41,22 @@ const Spotlight = () => {
           <MediaQuery maxWidth={768}>
             <IconPlay
               className="spotlight__titles--play"
-              width="25px"
-              height="25px"
+              width="6vw"
+              height="6vw"
             />
           </MediaQuery>
-          <MediaQuery minWidth={769}>
+          <MediaQuery minWidth={769} maxWidth={1024}>
             <IconPlay
               className="spotlight__titles--play"
-              width="50px"
-              height="50px"
+              width="5vw"
+              height="5vw"
+            />
+          </MediaQuery>
+          <MediaQuery minWidth={1025}>
+            <IconPlay
+              className="spotlight__titles--play"
+              width="2.5vw"
+              height="2.5vw"
             />
           </MediaQuery>
 

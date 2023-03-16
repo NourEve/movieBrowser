@@ -14,6 +14,9 @@ const SearchBar = ({ inputRef, onClick }) => {
           <MediaQuery minWidth={481} maxWidth={1024}>
             <IconSearchOutline width="4vw" height="4vw" />
           </MediaQuery>
+          <MediaQuery minWidth={1025}>
+            <IconSearchOutline width="2vw" height="2vw" />
+          </MediaQuery>
         </Link>
       </button>
       <input

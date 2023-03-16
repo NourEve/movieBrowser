@@ -94,3 +94,37 @@
             }
       }
 }
+
+@media screen and (min-width: 1025px) {
+      .spotlight {
+            width: 25%;
+            //margin: 0% 10%;
+
+            &__picture {
+                  border-radius: 2vw;
+            }
+
+            &__titles {
+                  @include blur(1vw);
+
+                  &--play {
+                        width: 30%;
+                        margin: auto;
+                  }
+
+                  &--display {
+                        display: flex;
+                        flex-direction: column;
+                        width: 70%;
+                  }
+
+                  &--subtitle {
+                        @include fontLato(400, 1vw, $grayText);
+                  }
+
+                  &--movie {
+                        @include fontLato(400, 1.5vw, white);
+                  }
+            }
+      }
+}

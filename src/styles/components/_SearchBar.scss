@@ -58,3 +58,28 @@
             }
       }
 }
+
+@media screen and (min-width: 1025px) {
+      .searchBar {
+            margin-bottom: 2.5%;
+            margin-left: 10%;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: flex-start;
+            height: 5vh;
+
+
+            &__button {
+                  width: 5%;
+                  height: 100%;
+                  border-radius: 1vw 0 0 1vw;
+            }
+
+            &__input {
+                  width: 15%;
+                  @include fontInter(1vw, #BBBBBB);
+                  border-radius: 0 1vw 1vw 0;
+            }
+      }
+}

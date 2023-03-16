@@ -328,3 +328,116 @@
 
       }
 }
+
+@media screen and (min-width: 1025px) {
+      .showFilm {
+
+            &__divAll {
+                  margin-top: 0;
+                  background-color: rgba(21, 20, 31, 0.6);
+                  padding: 1% 5% 2% 5%;
+
+                  &__title {
+                        @include fontLato(500, 2vw, white);
+                        margin-bottom: 3%;
+                        margin-left: 2.5%;
+                  }
+            }
+
+            &--desktop {
+                  display: flex;
+                  flex-direction: row;
+                  margin-bottom: -5%;
+                  align-items: center;
+
+                  &__timeNoteDateGenreSynopsis {
+                        width: 60%;
+                  }
+            }
+
+            &__timeAndNote {
+                  margin-bottom: 2%;
+
+                  &--text {
+                        @include fontLato(400, 1vw, $grayText);
+                  }
+
+                  &::after {
+                        height: 0.1vw;
+                  }
+            }
+
+            &__dateAndGenre {
+                  margin-top: 5%;
+                  margin-bottom: 10%;
+
+                  &__date {
+
+                        &--text {
+                              @include fontLato (400, 1vw, $grayText);
+                        }
+                  }
+
+                  &--title {
+                        @include fontLato(500, 2vw, white);
+                        margin-bottom: 5%;
+                  }
+
+                  &__genre {
+                        width: 50%;
+
+                        &--link {
+                              margin-right: 2%;
+                              @include blur(3vw);
+                              border: 0.1vw solid rgba(250, 240, 202, 0.05);
+                              background-color: $background;
+                        }
+                  }
+
+                  &::after {
+                        height: 0.1vw;
+                        bottom: -20%;
+                  }
+            }
+
+            &__synopsis {
+                  margin-top: -5%;
+                  margin-bottom: 7%;
+                  padding-right: 5%;
+
+                  &--title {
+                        @include fontLato(500, 2vw, white);
+                        margin-bottom: 2%;
+                  }
+
+                  &--text {
+                        @include fontLato (400, 1vw, $grayText);
+                  }
+            }
+
+            &__video {
+                  margin-bottom: 4%;
+                  width: 40%;
+
+                  &--title {
+                        @include fontLato(500, 2vw, white);
+                        margin-bottom: 5%;
+                  }
+            }
+
+            &__collection {
+                  &--title {
+                        @include fontLato(500, 2vw, white);
+                        margin-bottom: 1%;
+                  }
+            }
+
+            &__related {
+                  &--title {
+                        @include fontLato(500, 2vw, white);
+                        margin-bottom: 1%;
+                  }
+            }
+
+      }
+}

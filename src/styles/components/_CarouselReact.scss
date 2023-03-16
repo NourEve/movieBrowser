@@ -168,3 +168,79 @@
             }
       }
 }
+
+@media screen and (min-width: 1025px) {
+      .carousel {
+            &__title {
+                  margin-top: 2%;
+                  margin-left: 10%;
+                  @include fontLato(400, 2vw, white);
+            }
+      }
+
+      .trendingDesktop {
+            margin-left: 10%;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            &__slide {
+                  margin: 2%;
+                  width: 20%;
+                  position: relative;
+
+                  &__img {
+                        display: block;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 1vw;
+                  }
+
+                  &__title {
+                        display: flex;
+                        position: absolute;
+                        bottom: 2.5%;
+                        @include blur(1vw);
+                        left: 10%;
+                        width: 80%;
+                        height: 13%;
+                        text-align: center;
+
+                        h2 {
+                              @include fontLato(400, 1.3vw, white);
+                              margin: auto;
+                        }
+
+                  }
+
+                  &__average {
+                        position: absolute;
+                        @include blur(1vw);
+                        top: 2.5%;
+                        right: 2.5%;
+                        display: flex;
+                        flex-direction: column;
+                        width: 25%;
+                        height: 12%;
+                        padding: 2%;
+                  }
+
+                  &--subtitle {
+                        @include fontLato(400, 0.5vw, white);
+                        margin: 5%;
+                  }
+
+                  &--noteAndStar {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                  }
+
+                  &--note {
+                        @include fontLato(400, 1vw, white);
+                        margin-left: 5%;
+                  }
+            }
+      }
+}

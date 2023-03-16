@@ -70,3 +70,28 @@
             }
       }
 }
+
+@media screen and (min-width: 1025px) {
+      .navGenre {
+            width: 95%;
+            height: 7vh;
+            margin-left: 5%;
+            margin-right: 5%;
+
+            &__link {
+                  margin-left: 2%;
+                  @include fontLato(400, 1.5vw, white);
+            }
+
+            .active {
+                  @include gradientText;
+
+                  &::after {
+
+                        height: 0.15vw;
+                        bottom: 30%;
+
+                  }
+            }
+      }
+}

@@ -13,9 +13,16 @@
       @include fontLato (700, 6vw, $grayText);
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 1024px) {
       .searchPage__p {
             margin-top: 70%;
             @include fontLato (700, 5vw, $grayText);
+      }
+}
+
+@media screen and (min-width: 1025px) {
+      .searchPage__p {
+            margin-top: 20%;
+            @include fontLato (700, 3vw, $grayText);
       }
 }

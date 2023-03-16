@@ -46,3 +46,21 @@
             }
       }
 }
+
+@media screen and (min-width: 1025px) {
+      .header {
+            margin: 2% 5% 3% 10%;
+
+            &__title {
+                  @include fontLato(400, 2.5vw, white);
+
+                  &--color {
+                        @include gradientText;
+                  }
+            }
+
+            &__logo {
+                  width: 5%;
+            }
+      }
+}
